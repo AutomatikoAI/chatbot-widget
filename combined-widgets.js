@@ -246,6 +246,10 @@
                 position: fixed;
                 bottom: 20px;
                 right: 20px;
+
+                margin-right: 0px;
+                margin-bottom: 70px;
+                
                 width: 62px;
                 height: 62px;
                 border-radius: 50px;
