@@ -10,7 +10,7 @@
         const elevenLabsWidget = document.createElement('elevenlabs-convai');
         elevenLabsWidget.setAttribute('agent-id', 'AdjuqA5oyfxcfUBwwzGQ');
         elevenLabsWidget.style.marginRight = '53px';
-        elevenLabsWidget.style.marginBottom = '57px';
+        // elevenLabsWidget.style.marginBottom = '57px';
         document.body.appendChild(elevenLabsWidget);
         
         // Load the ElevenLabs script
@@ -32,22 +32,22 @@
                 route: 'general'
             },
             branding: {
-                logo: 'https://via.placeholder.com/40',
-                name: 'nocodecreative.io',
-                welcomeText: 'Hi 👋, how can we help?',
-                responseTimeText: 'We typically respond right away',
+                logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQia5bbIBnEEXYmLarDbocukANvGveOoyXGEg&s',
+                name: 'Assistente Zamna Real Estate',
+                welcomeText: 'Ciao! Come posso aiutarti?',
+                // responseTimeText: 'We typically respond right away',
                 poweredBy: {
                     text: 'Powered by n8n',
                     link: 'https://n8n.partnerlinks.io/m8a94i19zhqq?utm_source=nocodecreative.io'
                 }
             },
-            style: {
-                primaryColor: '#854fff',
-                secondaryColor: '#6b3fd4',
-                position: 'right',
-                backgroundColor: '#ffffff',
-                fontColor: '#333333'
-            }
+            // style: {
+            //     primaryColor: '#854fff',
+            //     secondaryColor: '#6b3fd4',
+            //     position: 'right',
+            //     backgroundColor: '#ffffff',
+            //     fontColor: '#333333'
+            // }
         };
         
         // Create and inject styles
@@ -143,7 +143,10 @@
                 gap: 8px;
                 width: 100%;
                 padding: 16px 24px;
-                background: linear-gradient(135deg, var(--chat--color-primary) 0%, var(--chat--color-secondary) 100%);
+                // background: linear-gradient(135deg, var(--chat--color-primary) 0%, var(--chat--color-secondary) 100%);
+                background: #0F2027;  /* fallback for old browsers */
+                background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
                 color: white;
                 border: none;
                 border-radius: 8px;
@@ -193,7 +196,10 @@
                 line-height: 1.5;
             }
             .n8n-chat-widget .chat-message.user {
-                background: linear-gradient(135deg, var(--chat--color-primary) 0%, var(--chat--color-secondary) 100%);
+                // background: linear-gradient(135deg, var(--chat--color-primary) 0%, var(--chat--color-secondary) 100%);
+                background: #0F2027;  /* fallback for old browsers */
+                background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
                 color: white;
                 align-self: flex-end;
                 box-shadow: 0 4px 12px rgba(133, 79, 255, 0.2);
@@ -229,7 +235,11 @@
                 opacity: 0.6;
             }
             .n8n-chat-widget .chat-input button {
-                background: linear-gradient(135deg, var(--chat--color-primary) 0%, var(--chat--color-secondary) 100%);
+                // background: linear-gradient(135deg, var(--chat--color-primary) 0%, var(--chat--color-secondary) 100%);
+                background: #0F2027;  /* fallback for old browsers */
+                background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                
                 color: white;
                 border: none;
                 border-radius: 8px;
@@ -248,16 +258,16 @@
                 right: 20px;
 
                 margin-right: 0px;
-                margin-bottom: 70px;
+                margin-bottom: 13.5px;
                 
                 width: 62px;
                 height: 62px;
                 border-radius: 50px;
-                background: white;
-                color: white;
+                background: #fefeff;
+                color: #fefeff;
                 border: none;
                 cursor: pointer;
-                box-shadow: 0 4px 12px rgba(133, 79, 255, 0.3);
+                // box-shadow: 0 4px 12px rgba(133, 79, 255, 0.3);
                 z-index: 999;
                 transition: transform 0.3s;
                 display: flex;
@@ -283,7 +293,8 @@
                 border-top: 1px solid rgba(133, 79, 255, 0.1);
             }
             .n8n-chat-widget .chat-footer a {
-                color: var(--chat--color-primary);
+                // color: var(--chat--color-primary);
+                color:rgb(202, 202, 202);
                 text-decoration: none;
                 font-size: 12px;
                 opacity: 0.8;
@@ -370,7 +381,7 @@
                     <svg class="message-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                         <path fill="currentColor" d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.2L4 17.2V4h16v12z"/>
                     </svg>
-                    Send us a message
+                    Mandami un messaggio
                 </button>
                 <p class="response-text">${config.branding.responseTimeText}</p>
             </div>
@@ -385,8 +396,8 @@
                 </div>
                 <div class="chat-messages"></div>
                 <div class="chat-input">
-                    <textarea placeholder="Type your message here..." rows="1"></textarea>
-                    <button type="submit">Send</button>
+                    <textarea placeholder="Scrivi il tuo messaggio qui..." rows="1"></textarea>
+                    <button type="submit">Invia</button>
                 </div>
                 <div class="chat-footer">
                     <a href="${config.branding.poweredBy.link}" target="_blank">${config.branding.poweredBy.text}</a>
