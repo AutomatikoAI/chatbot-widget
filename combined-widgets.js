@@ -8,7 +8,7 @@
     function initializeElevenLabsWidget() {
         // Create the ElevenLabs Voice Chat Widget element
         const elevenLabsWidget = document.createElement('elevenlabs-convai');
-        elevenLabsWidget.setAttribute('agent-id', 'AdjuqA5oyfxcfUBwwzGQ');
+        elevenLabsWidget.setAttribute('agent-id', 'GRuykHaWWh4fjhXeMPu5');
         elevenLabsWidget.style.marginRight = '53px';
         // elevenLabsWidget.style.marginBottom = '57px';
         document.body.appendChild(elevenLabsWidget);
