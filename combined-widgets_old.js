@@ -15,7 +15,7 @@
         
         // Load the ElevenLabs script
         const elevenLabsScript = document.createElement('script');
-        elevenLabsScript.src = 'elevenlabs.js';
+        elevenLabsScript.src = 'https://elevenlabs.io/convai-widget/index.js';
         elevenLabsScript.async = true;
         document.head.appendChild(elevenLabsScript);
     }
@@ -265,10 +265,10 @@
                 border-radius: 50px;
                 background: #fefeff;
                 color: #fefeff;
-                border: 1px solid #e1e1e1;
+                border: none;
                 cursor: pointer;
                 // box-shadow: 0 4px 12px rgba(133, 79, 255, 0.3);
-                z-index: 999999;
+                z-index: 999;
                 transition: transform 0.3s;
                 display: flex;
                 align-items: center;
