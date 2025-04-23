@@ -15,7 +15,8 @@
         
         // Load the ElevenLabs script
         const elevenLabsScript = document.createElement('script');
-        elevenLabsScript.src = 'https://automatikoai.github.io/chatbot-widget/elevenlabs.js';
+        //elevenLabsScript.src = 'https://automatikoai.github.io/chatbot-widget/elevenlabs.js';
+        elevenLabsScript.src = 'https://elevenlabs.io/convai-widget/index.js';
         elevenLabsScript.async = true;
         document.head.appendChild(elevenLabsScript);
     }
