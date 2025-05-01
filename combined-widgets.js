@@ -12,7 +12,7 @@
                 route: 'general'
             },
             branding: {
-                logo: 'logo.jpg',
+                logo: 'https://raw.githubusercontent.com/AutomatikoAI/chatbot-widget/refs/heads/main/logo.jpg',
                 name: 'Zamna Real Estate Assistant',
                 welcomeText: 'Hello! How can I help you?',
                 // responseTimeText: 'We typically respond right away',
@@ -117,6 +117,7 @@
                 color: #000000;
                 margin-bottom: 24px;
                 line-height: 1.3;
+                text-transform: none !important;
             }
             .n8n-chat-widget .new-chat-btn {
                 display: flex;
