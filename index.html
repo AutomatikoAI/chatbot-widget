@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Widget Example</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        h1 {
+            color: #2C5364;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        
+        p {
+            color: #555;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .feature-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature-card h3 {
+            color: #203A43;
+            margin-top: 0;
+            font-size: 22px;
+        }
+        
+        .feature-card p {
+            color: #666;
+            font-size: 16px;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            color: #777;
+            font-size: 14px;
+        }
+    </style>
+    
+    <!-- Include the chat widget script -->
+    <script src="combined-widgets.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Website with Chat Widget Example</h1>
+            <p>This is a demonstration of a standalone chat widget that can be added to any website.</p>
+        </header>
+        
+        <div class="features">
+            <div class="feature-card">
+                <h3>Easy Integration</h3>
+                <p>Simply include the script and it works out of the box with default configuration.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3>Responsive Design</h3>
+                <p>The chat widget is fully responsive and works seamlessly on all devices from mobile to desktop.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3>Pre-configured</h3>
+                <p>All settings are pre-configured for optimal user experience.</p>
+            </div>
+        </div>
+        
+        <p style="text-align: center; margin-top: 40px;">Click the chat icon in the bottom right corner to start a conversation!</p>
+        
+        <footer>
+            <p>© 2023 Chat Widget Example. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html> 

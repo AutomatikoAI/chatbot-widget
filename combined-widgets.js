@@ -1,28 +1,7 @@
-// Combined Widgets Script - Created by nocodecreative.io
 (function() {
-    
+
     //======================================================================
-    // PART 1: ELEVENLABS VOICE CHAT WIDGET IMPLEMENTATION
-    //======================================================================
-    
-    function initializeElevenLabsWidget() {
-        // Create the ElevenLabs Voice Chat Widget element
-        const elevenLabsWidget = document.createElement('elevenlabs-convai');
-        elevenLabsWidget.setAttribute('agent-id', 'GRuykHaWWh4fjhXeMPu5');
-        elevenLabsWidget.style.marginRight = '53px';
-        // elevenLabsWidget.style.marginBottom = '57px';
-        document.body.appendChild(elevenLabsWidget);
-        
-        // Load the ElevenLabs script
-        const elevenLabsScript = document.createElement('script');
-        elevenLabsScript.src = 'https://automatikoai.github.io/chatbot-widget/elevenlabs.js';
-        // elevenLabsScript.src = 'https://elevenlabs.io/convai-widget/index.js';
-        elevenLabsScript.async = true;
-        document.head.appendChild(elevenLabsScript);
-    }
-    
-    //======================================================================
-    // PART 2: TEXT CHAT WIDGET IMPLEMENTATION 
+    // TEXT CHAT WIDGET IMPLEMENTATION 
     //======================================================================
     
     function initializeTextChatWidget() {
@@ -33,22 +12,22 @@
                 route: 'general'
             },
             branding: {
-                logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQia5bbIBnEEXYmLarDbocukANvGveOoyXGEg&s',
-                name: 'Assistente Zamna Real Estate',
-                welcomeText: 'Ciao! Come posso aiutarti?',
+                logo: 'logo.jpg',
+                name: 'Zamna Real Estate Assistant',
+                welcomeText: 'Hello! How can I help you?',
                 // responseTimeText: 'We typically respond right away',
                 poweredBy: {
                     text: 'Powered by n8n',
                     link: 'https://n8n.partnerlinks.io/m8a94i19zhqq?utm_source=nocodecreative.io'
                 }
             },
-            // style: {
-            //     primaryColor: '#854fff',
-            //     secondaryColor: '#6b3fd4',
-            //     position: 'right',
-            //     backgroundColor: '#ffffff',
-            //     fontColor: '#333333'
-            // }
+            style: {
+                primaryColor: '#854fff',
+                secondaryColor: '#6b3fd4',
+                position: 'left',
+                backgroundColor: '#ffffff',
+                fontColor: '#333333'
+            }
         };
         
         // Create and inject styles
@@ -58,7 +37,7 @@
                 --chat--color-secondary: var(--n8n-chat-secondary-color, #6b3fd4);
                 --chat--color-background: var(--n8n-chat-background-color, #ffffff);
                 --chat--color-font: var(--n8n-chat-font-color, #333333);
-                font-family: 'Geist Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                font-family: 'Outfit', sans-serif;
             }
             .n8n-chat-widget .chat-container {
                 position: fixed;
@@ -73,7 +52,7 @@
                 box-shadow: 0 8px 32px rgba(133, 79, 255, 0.15);
                 border: 1px solid rgba(133, 79, 255, 0.2);
                 overflow: hidden;
-                font-family: inherit;
+                font-family: 'Outfit', sans-serif;
             }
             .n8n-chat-widget .chat-container.position-left {
                 right: auto;
@@ -114,11 +93,13 @@
             .n8n-chat-widget .brand-header img {
                 width: 32px;
                 height: 32px;
+                border-radius: 50%;
+                object-fit: cover;
             }
             .n8n-chat-widget .brand-header span {
                 font-size: 18px;
-                font-weight: 500;
-                color: var(--chat--color-font);
+                font-weight: 700;
+                color: #000000;
             }
             .n8n-chat-widget .new-conversation {
                 position: absolute;
@@ -132,8 +113,8 @@
             }
             .n8n-chat-widget .welcome-text {
                 font-size: 24px;
-                font-weight: 600;
-                color: var(--chat--color-font);
+                font-weight: 700;
+                color: #000000;
                 margin-bottom: 24px;
                 line-height: 1.3;
             }
@@ -155,7 +136,7 @@
                 font-size: 16px;
                 transition: transform 0.3s;
                 font-weight: 500;
-                font-family: inherit;
+                font-family: 'Outfit', sans-serif;
                 margin-bottom: 12px;
             }
             .n8n-chat-widget .new-chat-btn:hover {
@@ -228,7 +209,7 @@
                 background: var(--chat--color-background);
                 color: var(--chat--color-font);
                 resize: none;
-                font-family: inherit;
+                font-family: 'Outfit', sans-serif;
                 font-size: 14px;
             }
             .n8n-chat-widget .chat-input textarea::placeholder {
@@ -247,7 +228,7 @@
                 padding: 0 20px;
                 cursor: pointer;
                 transition: transform 0.2s;
-                font-family: inherit;
+                font-family: 'Outfit', sans-serif;
                 font-weight: 500;
             }
             .n8n-chat-widget .chat-input button:hover {
@@ -256,36 +237,78 @@
             .n8n-chat-widget .chat-toggle {
                 position: fixed;
                 bottom: 20px;
-                right: 20px;
-
+                left: 20px;
                 margin-right: 0px;
                 margin-bottom: 13.5px;
-                
                 width: 62px;
                 height: 62px;
-                border-radius: 50px;
-                background: #fefeff;
-                color: #fefeff;
-                border: 1px solid #e1e1e1;
                 cursor: pointer;
-                // box-shadow: 0 4px 12px rgba(133, 79, 255, 0.3);
                 z-index: 999999;
                 transition: transform 0.3s;
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                border-radius: 50%;
+                overflow: visible;
+                padding: 2px;
+                background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+                background-size: 300% 300%;
+                animation: animatedgradient 3s ease alternate infinite;
+                box-shadow: none;
+                border: none;
+            }
+            .n8n-chat-widget .chat-toggle::before {
+                content: '';
+                position: absolute;
+                top: 2px;
+                left: 2px;
+                right: 2px;
+                bottom: 2px;
+                background: transparent;
+                border-radius: 50%;
+                z-index: 0;
+            }
+            @keyframes animatedgradient {
+                0% {
+                    background-position: 0% 50%;
+                }
+                50% {
+                    background-position: 100% 50%;
+                }
+                100% {
+                    background-position: 0% 50%;
+                }
             }
             .n8n-chat-widget .chat-toggle.position-left {
                 right: auto;
                 left: 20px;
             }
+            .n8n-chat-widget .chat-toggle.position-right {
+                left: auto;
+                right: 20px;
+            }
             .n8n-chat-widget .chat-toggle:hover {
                 transform: scale(1.05);
             }
-            .n8n-chat-widget .chat-toggle svg {
-                width: 24px;
-                height: 24px;
-                fill: black;
+            .n8n-chat-widget .chat-toggle img {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                object-fit: cover;
+                position: relative;
+                z-index: 1;
+            }
+            .n8n-chat-widget .live-indicator {
+                position: absolute;
+                top: 5px;
+                right: 9px;
+                width: 12px;
+                height: 12px;
+                background-color: #00d084;
+                border-radius: 50%;
+                border: 2px solid #ffffff;
+                z-index: 2;
+                transform: translate(30%, -30%);
             }
             .n8n-chat-widget .chat-footer {
                 padding: 8px;
@@ -300,18 +323,29 @@
                 font-size: 12px;
                 opacity: 0.8;
                 transition: opacity 0.2s;
-                font-family: inherit;
+                font-family: 'Outfit', sans-serif;
             }
             .n8n-chat-widget .chat-footer a:hover {
                 opacity: 1;
             }
         `;
         
-        // Load Geist font
-        const fontLink = document.createElement('link');
-        fontLink.rel = 'stylesheet';
-        fontLink.href = 'https://cdn.jsdelivr.net/npm/geist@1.0.0/dist/fonts/geist-sans/style.css';
-        document.head.appendChild(fontLink);
+        // Load Outfit font from Google Fonts
+        const fontLink1 = document.createElement('link');
+        fontLink1.rel = 'preconnect';
+        fontLink1.href = 'https://fonts.googleapis.com';
+        document.head.appendChild(fontLink1);
+        
+        const fontLink2 = document.createElement('link');
+        fontLink2.rel = 'preconnect';
+        fontLink2.href = 'https://fonts.gstatic.com';
+        fontLink2.crossOrigin = 'anonymous';
+        document.head.appendChild(fontLink2);
+        
+        const fontLink3 = document.createElement('link');
+        fontLink3.rel = 'stylesheet';
+        fontLink3.href = 'https://fonts.googleapis.com/css2?family=Outfit&display=swap';
+        document.head.appendChild(fontLink3);
         
         // Inject styles
         const styleSheet = document.createElement('style');
@@ -337,7 +371,7 @@
             style: {
                 primaryColor: '',
                 secondaryColor: '',
-                position: 'right',
+                position: 'left',
                 backgroundColor: '#ffffff',
                 fontColor: '#333333'
             }
@@ -368,7 +402,15 @@
         widgetContainer.style.setProperty('--n8n-chat-font-color', config.style.fontColor);
         
         const chatContainer = document.createElement('div');
-        chatContainer.className = `chat-container${config.style.position === 'left' ? ' position-left' : ''}`;
+        chatContainer.className = 'chat-container';
+        if (config.style.position === 'left') {
+            chatContainer.classList.add('position-left');
+            chatContainer.style.left = '20px';
+            chatContainer.style.right = 'auto';
+        } else {
+            chatContainer.style.right = '20px';
+            chatContainer.style.left = 'auto';
+        }
         
         const newConversationHTML = `
             <div class="brand-header">
@@ -382,7 +424,7 @@
                     <svg class="message-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                         <path fill="currentColor" d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.2L4 17.2V4h16v12z"/>
                     </svg>
-                    Mandami un messaggio
+                    Send me a message
                 </button>
                 <p class="response-text">${config.branding.responseTimeText}</p>
             </div>
@@ -397,8 +439,8 @@
                 </div>
                 <div class="chat-messages"></div>
                 <div class="chat-input">
-                    <textarea placeholder="Scrivi il tuo messaggio qui..." rows="1"></textarea>
-                    <button type="submit">Invia</button>
+                    <textarea placeholder="Type your message here..." rows="1"></textarea>
+                    <button type="submit">Send</button>
                 </div>
                 <div class="chat-footer">
                     <a href="${config.branding.poweredBy.link}" target="_blank">${config.branding.poweredBy.text}</a>
@@ -409,11 +451,19 @@
         chatContainer.innerHTML = newConversationHTML + chatInterfaceHTML;
         
         const toggleButton = document.createElement('button');
-        toggleButton.className = `chat-toggle${config.style.position === 'left' ? ' position-left' : ''}`;
+        toggleButton.className = 'chat-toggle';
+        if (config.style.position === 'left') {
+            toggleButton.classList.add('position-left');
+            toggleButton.style.left = '20px';
+            toggleButton.style.right = 'auto';
+        } else {
+            toggleButton.classList.add('position-right');
+            toggleButton.style.right = '20px';
+            toggleButton.style.left = 'auto';
+        }
         toggleButton.innerHTML = `
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path d="M12 2C6.477 2 2 6.477 2 12c0 1.821.487 3.53 1.338 5L2.5 21.5l4.5-.838A9.955 9.955 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18c-1.476 0-2.886-.313-4.156-.878l-3.156.586.586-3.156A7.962 7.962 0 014 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8z"/>
-            </svg>`;
+            <img src="${config.branding.logo}" alt="${config.branding.name}">
+            <div class="live-indicator"></div>`;
         
         widgetContainer.appendChild(chatContainer);
         widgetContainer.appendChild(toggleButton);
@@ -526,6 +576,7 @@
         
         toggleButton.addEventListener('click', () => {
             chatContainer.classList.toggle('open');
+            toggleButton.style.display = 'none';
         });
         
         // Add close button handlers
@@ -533,23 +584,21 @@
         closeButtons.forEach(button => {
             button.addEventListener('click', () => {
                 chatContainer.classList.remove('open');
+                toggleButton.style.display = 'flex';
             });
         });
     }
     
     //======================================================================
-    // PART 3: INITIALIZE BOTH WIDGETS ON PAGE LOAD
+    // INITIALIZE WIDGET ON PAGE LOAD
     //======================================================================
     
     // Initialize both widgets when the DOM is loaded
     document.addEventListener('DOMContentLoaded', function() {
-        // Initialize ElevenLabs Voice Chat Widget
-        initializeElevenLabsWidget();
         
         // Initialize Text Chat Widget
         initializeTextChatWidget();
-        
-        console.log('Both widgets have been successfully initialized!');
+    
     });
     
 })();
